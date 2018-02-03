@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <title>Pbs</title>
+</head>
+<body>
+  <h1>PATIENT BILLING SOFTWARE</h1>
+  <div>
+    <div class="col-md-12">
+      <a href="{% url 'patient_registration' %}"><button type="button" class="btn btn-primary">Patient Registration</button></a>
+      <a href="{% url 'general' %}"><button type="button" class="btn btn-primary">General Ward</button></a>
+      <p><br><br></p>
+    </div>
+  </div>
+  <div class="col-md-8">
+     <a href="{% url 'bill_details' %}"><button type="button" class="btn btn-primary">Allot Room / Ward</button></a>
+    <button type="button" class="btn btn-primary">I.C.U</button>
+    <p><br><br></p>
+  </div>
+  <div class="col-md-8">
+    <a href="{% url 'treatments_needed' %}"><button type="button" class="btn btn-primary">Treatments Needed</button></a>
+    <button type="button" class="btn btn-primary">All Patient details</button>
+    <p><br><br></p>
+  </div>
+  <div class="col-md-8">
+    <button type="button" class="btn btn-primary">Transfers / Updates</button>
+    <button type="button" class="btn btn-primary">Bill Generator</button>
+    <p><br><br></p>
+  </div>
+</body>
+</html>
