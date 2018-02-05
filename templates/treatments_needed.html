@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<form method="POST">
+{% csrf_token %}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">registration number</span>
   </div>
-  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="prno">
   <br><br>
 </div>
 
@@ -13,10 +15,19 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">treatment id</span>
   </div>
-  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="ptid">
   <br><br>
 </div>
 
 
-<a href="{% url 'home' %}">Submit</a>
+<a href="{% url 'home' %}"><button type="submit" class="btn btn-success">Post</button></a>
+</form>
+<br>
+<br>
+<p>treatment_id  --- disease ------cost</p><br>
+{% for x in ol %}
+ 
+ <p>{{x.tid}} ---------- >  {{x.tname}}  --------->{{x.tcost}}</p>
+{% endfor %}
+
 {% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST">
+{% csrf_token %}
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">registration number</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="brno">
+  <br><br>
+</div>
+
+
+<a href="{% url 'home' %}"><button type="submit" class="btn btn-success">Post</button></a>
+</form>
+
+{% endblock %}

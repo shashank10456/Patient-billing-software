@@ -30,3 +30,15 @@
 
 {% endfor %}
 {% endblock %}
+
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+{% for x in ol %}
+<tr>
+<td>{{ x.bedno }}</td>
+</tr>
+{% endfor %}
+{% endblock %}

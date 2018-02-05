@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{%  if wardno|add:0 == 1 %}
+
+<p>Number of days spent: {{days}}</p>
+<p>Cost of 1 day in general ward: 1000</p>
+<p>Total cost of general ward (including number of seconds) : {{ward_cost}}</p>
+
+{% else %}
+
+<p>Number of days spent: {{days}}</p>
+<p>Cost of 1 day in ICU : 2000</p>
+<p>Total cost of icu ward(including number of seconds) : {{ward_cost}}</p>
+
+{% endif %}
+<br>
+<p>------>       treatments taken and their respective costs</p>
+<p>---------------------------------------------------------------------------------------------------</p>
+{% for x in l %}
+
+<p>{{x.tname}}  ---->  {{x.tcost}}  </p>
+
+{% endfor %}
+<p>---------------------------------------------------------------------------------------------------</p>
+<p>Total Cost of the Treatment = Cost of treatments +  cost of staying in ward = {{total_cost}}</p>
+<br>
+<p>Total amount already paid ={{paid}}</p>
+<p>---------------------------------------------------------------------------------------------------</p>
+<p>Net amount to be settled :  = {{remaining_amt}}</p>
+
+ <div>
+    <div class="col-md-12">
+      <a href="{% url 'home' %}"><button type="button" class="btn btn-primary">Settled</button></a>
+      <a href="{% url 'transfers' %}"><button type="button" class="btn btn-primary">Update </button></a>
+      <p><br><br></p>
+    </div>
+{% endblock %}

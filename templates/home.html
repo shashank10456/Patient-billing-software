@@ -19,17 +19,17 @@
   </div>
   <div class="col-md-8">
      <a href="{% url 'bill_details' %}"><button type="button" class="btn btn-primary">Allot Room / Ward</button></a>
-    <button type="button" class="btn btn-primary">I.C.U</button>
+    <a href="{% url 'icu' %}"><button type="button" class="btn btn-primary">I.C.U</button></a>
     <p><br><br></p>
   </div>
   <div class="col-md-8">
     <a href="{% url 'treatments_needed' %}"><button type="button" class="btn btn-primary">Treatments Needed</button></a>
-    <button type="button" class="btn btn-primary">All Patient details</button>
+    <a href="{% url 'all_patient_details' %}"><button type="button" class="btn btn-primary">All Patient Details</button></a>
     <p><br><br></p>
   </div>
   <div class="col-md-8">
-    <button type="button" class="btn btn-primary">Transfers / Updates</button>
-    <button type="button" class="btn btn-primary">Bill Generator</button>
+      <a href="{% url 'transfers' %}"><button type="button" class="btn btn-primary">Transfers/ Updates</button></a>
+     <a href="{% url 'bill_generator' %}"><button type="button" class="btn btn-primary">Bill Generator</button></a>
     <p><br><br></p>
   </div>
 </body>
